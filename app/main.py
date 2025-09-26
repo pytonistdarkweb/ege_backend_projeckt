@@ -10,9 +10,6 @@ def hello():
     return(f'привет ты попал на мой сайт')
 
 
-
-
-
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",
