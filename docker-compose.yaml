@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+    - POSTGRES_USER=erik
+    - POSTGRES_PASSWORD=erik_progger
+    - POSTGRES_DB=postgres_ege
+    ports:
+      - "5432:5435"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
