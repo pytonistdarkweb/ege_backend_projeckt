@@ -3,7 +3,7 @@ import bcrypt
 
 def hash_password(password: str):
     """метод шифрования пароля"""
-    return bcrypt.checkpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf8")
+    return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf8")
 
 
 def validate_password(password: str, hashed_password: str) -> bool:
